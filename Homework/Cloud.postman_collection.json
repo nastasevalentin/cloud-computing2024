@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 1,\n    \"title\": \"Book Title\",\n    \"author\": \"Author Name\",\n    \"published_date\": \"2022-01-01\",\n    \"pages\": 100\n}",
+					"raw": "{\n    \"title\": \"--delete * from books;\",\n    \"author\": \"Author Name\",\n    \"published_date\": \"2022-01-01\",\n    \"pages\": 100\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 2,\n    \"title\": \"The Shawshank Redemption\",\n    \"director\": \"Frank Darabont\",\n    \"year\": 1994\n}",
+					"raw": "{\n    \"title\": \"The Shawshank Redemption\",\n    \"director\": \"Frank Darabont\",\n    \"year\": 1994\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -99,10 +99,38 @@
 			"response": []
 		},
 		{
+			"name": "GetAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GetAllBooks",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
 			},
 			"response": []
 		},
@@ -124,7 +152,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "7"
+							"value": "1"
 						}
 					]
 				}
@@ -156,7 +184,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Book Title\",\n    \"author\": \"Da Name\",\n    \"published_date\": \"2022-01-01\",\n    \"pages\": 100\n}",
+					"raw": "{\n    \"title\": \"Book Title\",\n    \"author\": \"Da d\",\n    \"published_date\": \"2022-01-01\",\n    \"pages\": 100\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -176,7 +204,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "3"
+							"value": "1"
 						}
 					]
 				}
@@ -190,7 +218,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"T Shawshank Redemption\",\n    \"director\": \"Frank Darabont\",\n    \"year\": 1994\n}",
+					"raw": "{\n    \"title\": \"T Shawshank Redemption\",\n    \"director\": \"dgf Darabont\",\n    \"year\": 1994\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -210,7 +238,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "3"
+							"value": "34"
 						}
 					]
 				}
