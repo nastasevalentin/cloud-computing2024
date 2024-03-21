@@ -1,0 +1,9 @@
+.book-detail-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; 
+  }
+  
+  .book-detail {
+    margin-right: 50px;
+  }
