@@ -114,8 +114,8 @@ module.exports = function handleBookRequest(req, res) {
         req.on('end', () => {
           let book = JSON.parse(body);
 
-          let sql = 'UPDATE books SET title = $1, author = $2, published_date = $3 WHERE id = $4';
-          let values = [book.title, book.author, book.published_date, id];
+          let sql = 'UPDATE books SET title = $1, author = $2, published_date = $3, pages = $4 WHERE id = $5';
+          let values = [book.title, book.author, book.published_date, book.pages, id];
 
           client.query(sql, values, (err, result) => {
             if (err) {
