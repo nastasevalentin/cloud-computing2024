@@ -1,0 +1,19 @@
+.movie-detail-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.movie-detail {
+    margin-right: 50px;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup form label,
+.popup form div {
+    margin: 10px 0;
+}

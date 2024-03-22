@@ -5,7 +5,9 @@ module.exports = function handleMovieRequest(req, res) {
     const parsedUrl = url.parse(req.url, true);
     const path = parsedUrl.pathname;
     const id = path.split('/').pop();
-    
+    const reqUrl = url.parse(req.url, true);
+
+
     if (req.method === 'POST' && path === '/movies') {
         let body = '';
         req.on('data', chunk => {
@@ -102,6 +104,31 @@ module.exports = function handleMovieRequest(req, res) {
           res.statusCode = 200;
           res.setHeader('Content-Type', 'application/json');
           res.end(JSON.stringify(result.rows));
+        });
+      }
+      else if (req.method === 'GET' && reqUrl.pathname.startsWith('/movies/')) {
+        const id = reqUrl.pathname.split('/')[2];
+
+        const sql = 'SELECT * FROM movies WHERE id = $1';
+        const values = [id];
+        client.query(sql, values, (err, result) => {
+          if (err) {
+            console.error(err);
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ message: 'Internal Server Error' }));
+            return;
+          }
+  
+          if (result.rows.length > 0) {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(result.rows[0]));
+          } else {
+            res.statusCode = 404;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ message: 'Book not found' }));
+          }
         });
       }
       else {

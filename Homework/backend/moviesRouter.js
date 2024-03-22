@@ -12,6 +12,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const response = await axios.get(
+      `http://localhost:4000/movies/${req.params.id}`
+    );
+    res.send(response.data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error occurred while fetching data");
+  }
+});
+
 router.put("/:id", async (req, res) => {
   try {
     const response = await axios.put(
