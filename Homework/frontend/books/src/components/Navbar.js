@@ -35,6 +35,16 @@ const Navbar = () => {
             Movies
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/books-stephen-king" activeClassName="active">
+            Books Stephen King
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/random-book" activeClassName="active">
+            Random Book
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

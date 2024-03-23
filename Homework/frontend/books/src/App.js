@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Movies from "./components/Movies";
 import CreateMovie from "./components/CreateMovie";
 import MovieDetail from "./components/MovieDetail";
+import BooksStephen from "./components/BooksStephen";
+import RandomBook from "./components/RandomBook";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/movies/create" element={<CreateMovie />} />
+        <Route path="/books-stephen-king" element={<BooksStephen />} />
+        <Route path="/random-book" element={<RandomBook />} />
       </Routes>
     </Router>
   );

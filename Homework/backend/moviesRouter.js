@@ -37,6 +37,18 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const response = await axios.delete(
+      `http://localhost:4000/movies/${req.params.id}`
+    );
+    res.send(response.data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error occurred while deleting data");
+  }
+});
+
 router.post("/", async (req, res) => {
   try {
     const response = await axios.post("http://localhost:4000/movies", req.body);

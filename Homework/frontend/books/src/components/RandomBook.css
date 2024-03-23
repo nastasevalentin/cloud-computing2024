@@ -1,0 +1,42 @@
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items towards the start of the container */
+    height: 50vh;
+    width: 100%;
+    padding-top: 10px; /* Increase this value to move the book item further up */
+  }
+  
+  .book-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #ccc;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+  }
+
+  .review-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; 
+    width: 80%; 
+    text-align: center;
+  }
+  
+  .review-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .review-box p {
+    font-size: 16px;
+  }

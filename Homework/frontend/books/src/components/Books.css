@@ -1,4 +1,4 @@
-.book-item {
+.book-item{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,20 +19,20 @@
 }
 
 .button {
-    background-color: #df1839;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 5px 10px; 
-    font-size: 14px;
-    width: 250px;
+  background-color: #df1839;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px; 
+  font-size: 14px;
+  width: 250px;
 }
 
 .books-container {
@@ -42,6 +42,6 @@
   justify-content: flex-start;
 }
 
-.delete-button {
+.detele-button{
   margin-top: 150px;
 }
